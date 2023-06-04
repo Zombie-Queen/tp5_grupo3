@@ -9,5 +9,11 @@
 		<property name="contrasenia" value="123"></property>		
 	</bean>
 	
+	/* <bean id="UsuarioNegocio" class="negocio.UsuarioNegocio" init-method="initUsuarioNegocio" destroy-method="destroyUsuarioNegocio">>
+        <property name="usuarioDao" ref="UsuarioDao"/>
+        </bean>
+        */
+	
+	
 </beans>
 	
