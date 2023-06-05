@@ -5,15 +5,15 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import entidad.Usuario;
+import negocio.UsuarioNegocio;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("resources/Beans.xml");
-		Usuario p1 = (Usuario)appContext.getBean("Usuario");
-		System.out.println(p1.toString());
-		
+		UsuarioNegocio p1 = (UsuarioNegocio)appContext.getBean("UsuarioNegocio");
+
 		((ConfigurableApplicationContext)(appContext)).close();
 	}	
 }

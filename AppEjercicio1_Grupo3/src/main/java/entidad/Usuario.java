@@ -9,11 +9,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import negocio.IUsuarioNegocio;
 import negocio.UsuarioNegocio;
 
 @Entity
 @Table(name="User")
-public class Usuario implements Serializable, IUsuario{
+public class Usuario implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -24,6 +25,7 @@ public class Usuario implements Serializable, IUsuario{
 	@Column(name="pass")
 	private String contrasenia;
 	
+
 	//Constructor vacio
 	public Usuario()
 	{
@@ -59,17 +61,6 @@ public class Usuario implements Serializable, IUsuario{
 	public void destroyUsuario() {
 		System.out.println("Se cierra bean");
 	}
-
-
-	public void agregarUsuario(Usuario usuario) {
-		
-	    UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
-	    boolean estado= usuarioNegocio.agregarUsuario(usuario);
-	    if(estado)
-	    	System.out.println("Se agrego correctamente");
-	    else
-	    	System.out.println("No se pudo agregar, el usuario ya existe en la BD");
-		
-	}
-
+	
+	
 }
