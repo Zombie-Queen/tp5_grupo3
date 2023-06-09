@@ -1,9 +1,10 @@
 package principal;
 
-import entidad.Usuario;
-import negocio.UsuarioNegocio;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import entidad.Usuario;
+import negocio.UsuarioNegocio;
 import resources.Config;
 
 public class Main {
